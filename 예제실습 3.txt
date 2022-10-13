@@ -1,0 +1,27 @@
+#include <stdio.h>
+#define SIZE 10
+
+void search(int* array, int size, int money);
+
+int main(void) {
+	int salary[SIZE] = {100, 200, 200, 300, 400, 200};
+	int money;
+	printf("찾고싶은 월급: \n");
+	scanf("%d", &money);
+	search(salary, SIZE, money);
+	return 0;
+}
+
+void search(int* array, int size, int money) {
+	int sum = 0;
+	for (int i = 0; i < size; i++) {
+		if (array[i] == money) {
+			printf("월급이 %d만원인 사람의 인덱스 = %d\n", money, i);
+			sum++;
+		}
+		
+	}
+	if (sum == 0) {
+			printf("월급을 %d만원 받는 사람이 없습니다. \n", money);
+		}
+}

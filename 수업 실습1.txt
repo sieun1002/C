@@ -1,0 +1,30 @@
+#include <stdio.h>
+#define SIZE 5
+
+double get_array_avg(int *data);
+void print_array(int* data);
+
+int main(void) {
+	int data[SIZE] = { 10, 20, 30, 40, 50 };
+	double result;
+
+	result = get_array_avg(data);
+	printf("%f\n", result);
+
+	print_array(data);
+}
+
+double get_array_avg(int *data) {
+	int sum = 0;
+	double avg = 0.0;
+	for (int i = 0; i < SIZE; i++) {
+		sum += *data++;
+	}
+	avg = sum / SIZE;
+	return avg;
+}
+void print_array(int* data) {
+	for (int i = 0; i < SIZE; i++) {
+		printf("%d\n", data[i]);
+	}
+}

@@ -1,0 +1,29 @@
+#include <stdio.h>
+#define SIZE 10
+
+void array_copy(int* array1, int *array2, int size);
+void array_print(int* array1, int size);
+
+int main(void) {
+	int array_A[SIZE] = { 10, 20, 30};
+	int array_B[SIZE];
+
+	array_copy(array_A, array_B, SIZE);
+	array_print(array_A, SIZE);
+	array_print(array_B, SIZE);
+	return 0;
+}
+
+void array_copy(int* array1, int* array2, int size) {
+	for (int i = 0; i < size; i++) {
+		array2[i] = array1[i];
+	}
+}
+
+void array_print(int* array1, int size) {
+	for (int i = 0; i < size; i++) {
+		printf("%d ", array1[i]);
+	}
+
+	printf("\n");
+}
