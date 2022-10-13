@@ -18,3 +18,4 @@ int main(void)
 	printf("원소들의 차 = %d\n", diff);
 	return 0;
 }
+
